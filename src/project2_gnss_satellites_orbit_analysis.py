@@ -26,7 +26,7 @@ Original file is located at
  -----------
 In Project 1 we computed the raw ECEF X, Y, Z positions of every GPS satellite.
 This project goes deeper: we analyse the **orbital mechanics** of those trajectories
-and produce a set of diagnostic plots that a GNSS orbit analyst would use daily.
+and produce a set of diagnostic plots.
 
 **5 plots produced:**
 
