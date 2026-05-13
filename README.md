@@ -64,15 +64,16 @@ Polar plot showing each satellite's RAAN. The 6-plane Walker structure
 ## 📂 File Structure
 
 ```
-project_2/
-├── src/
-│   └── project2_orbit_analysis.ipynb   ← Main notebook
+gnss-satellite-orbit-analysis/
+│
 ├── output/
 │   ├── plot1_keplerian_elements.png
 │   ├── plot2_ground_tracks.png
 │   ├── plot3_speed_period.png
 │   ├── plot4_raan_wheel.png
 │   └── plot5_constellation_geometry.png
+├── src/
+│   └── project2_gnss_satellites_orbit_analysis.py     ← Main python
 ├── requirements.txt
 ├── LICENSE
 └── README.md
