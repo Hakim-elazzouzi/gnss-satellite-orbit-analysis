@@ -70,10 +70,6 @@ GPS satellites repeat their ground track every **sidereal day** (≈ 23h 56m 4s)
 # Step6: Plot 3: Quality Score Summary Scatter
 # Step7: Generate the Text Quality Report
 =============================================================================
-"""
-
-pip install --upgrade georinex
-"""
 # ───────────────────────────────────
 # Step 1 — Install & Import Libraries
 # ───────────────────────────────────
