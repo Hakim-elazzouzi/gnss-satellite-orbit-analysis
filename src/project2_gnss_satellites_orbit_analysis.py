@@ -1,12 +1,6 @@
 =============================================================================
-🛰️ Project 2 — GNSS Satellite Orbit Analysis
+Project 2 — GNSS Satellite Orbit Analysis
 =============================================================================
- Author   : Hakim El Azzouzi
- Degree   : MSc Global Navigation Satellite Systems
-            Mohammed First University, Oujda, Morocco
- Email    : elazzouzihakim10@gmail.com
- LinkedIn : https://linkedin.com/in/Hakim-El-Azzouzi
- Location : Luxembourg 🇱🇺
 -----------------------------------------------------------------------------
  File type    : RINEX 2 GPS Navigation
  Date         : 2026-01-01 (Day of Year 001)
@@ -24,15 +18,15 @@ and produce a set of diagnostic plots.
 
 | Plot | What It Shows |
 |------|---------------|
-| 🌍 Orbital plane geometry | Inclination, RAAN, and orbital plane orientation for each satellite |
-| 📐 Keplerian elements | How key orbital parameters vary across the constellation |
-| 🔄 Ground track | Sub-satellite point latitude vs longitude on a world map |
-| ⏱️ Orbital period & velocity | Speed and period computed from the ephemeris |
-| 📊 Constellation coverage | How many satellites are above 10° elevation from Auckland |
+| Orbital plane geometry | Inclination, RAAN, and orbital plane orientation for each satellite |
+| Keplerian elements | How key orbital parameters vary across the constellation |
+| Ground track | Sub-satellite point latitude vs longitude on a world map |
+| Orbital period & velocity | Speed and period computed from the ephemeris |
+| Constellation coverage | How many satellites are above 10° elevation from Auckland |
 
 ---
 
-## 📐 Orbital Mechanics Background
+## Orbital Mechanics Background
 
 A GPS satellite orbit is described by **6 Keplerian elements**:
 
@@ -110,7 +104,7 @@ print(f'   Nominal GPS orbital period : {T_GPS_NOM/3600:.4f} hours  (~11h 58m)')
 
 nav_path = "/brdc0010.26n"   # ← change this if needed
 
-print("⏳ Loading navigation file...")
+print("Loading navigation file...")
 nav = gr.load(nav_path)
 print("✅ Done!")
 print()
@@ -317,7 +311,7 @@ plt.show()
 
 print('✅ Saved: ../content/output/plot1_keplerian_elements.png')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print('   • Semi-major axis: all ~26,560 km — GPS design requirement')
 print('   • Eccentricity: all < 0.02 — nearly circular, by design')
 print('   • Inclination: all ~55° — allows coverage up to 55° latitude')
@@ -346,7 +340,7 @@ t_gps_epochs   = GPS_WEEK_START + np.arange(N_EPOCHS) * STEP_SEC
 utc_timestamps = pd.date_range('2026-01-01 00:00', periods=N_EPOCHS, freq='15min')
 
 # Compute XYZ and convert to lat/lon
-print("⏳ Computing ground tracks...")
+print("Computing ground tracks...")
 
 ground_tracks = {}   # sat → {'lat': array, 'lon': array}
 
@@ -444,7 +438,7 @@ plt.show()
 
 print('✅ Saved: output/plot2_ground_tracks.png')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print('   • Sinusoidal shape = orbit inclined at 55° + Earth rotation underneath')
 print('   • Latitude never exceeds ±55° — GPS cannot fly over the poles')
 print('   • Satellites repeat their ground track every sidereal day (~23h 56m)')
@@ -518,13 +512,13 @@ plt.show()
 
 print('✅ Saved: output/plot3_speed_period.png')
 print()
-print('📊 Speed and period summary:')
+print('Speed and period summary:')
 print(f"   Nominal speed  : {V_GPS_NOM/1e3:.4f} km/s")
 print(f"   Actual range   : {min(speeds):.4f} – {max(speeds):.4f} km/s")
 print(f"   Nominal period : {T_GPS_NOM/3600:.4f} h")
 print(f"   Actual range   : {min(periods):.4f} – {max(periods):.4f} h")
 print()
-print('💡 The tiny spread (~0.001 km/s) shows all satellites are maintained')
+print('The tiny spread (~0.001 km/s) shows all satellites are maintained')
 print('   in very tightly controlled orbital slots by ground control.')
 
 # ────────────────────────────────────────────────────────
@@ -597,7 +591,7 @@ plt.show()
 
 print('✅ Saved: output/plot4_raan_wheel.png')
 print()
-print('💡 Interpretation:')
+print('Interpretation:')
 print('   • Satellites cluster in 6 groups ~60° apart in RAAN')
 print('   • This is the GPS Walker constellation design')
 print('   • Each cluster = one orbital plane (A through F)')
@@ -678,7 +672,7 @@ plt.show()
 
 print('✅ Saved: output/plot5_constellation_geometry.png')
 print()
-print('📊 Constellation geometry summary:')
+print('Constellation geometry summary:')
 print(f"   Inclination  : {min(inc_vals):.3f}° – {max(inc_vals):.3f}°  (mean {np.mean(inc_vals):.3f}°)")
 print(f"   RAAN         : {min(raan_vals):.1f}° – {max(raan_vals):.1f}°")
 print(f"   Eccentricity : {min(ecc_vals):.6f} – {max(ecc_vals):.6f}  (mean {np.mean(ecc_vals):.6f})")
