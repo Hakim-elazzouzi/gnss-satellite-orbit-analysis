@@ -1,10 +1,10 @@
-# 🛰️ Project 2 — GNSS Satellite Orbit Analysis
+# Project 2 — GNSS Satellite Orbit Analysis
 
 > **Keplerian Elements · Ground Tracks · Orbital Speed · RAAN Wheel · Constellation Geometry | 2026-01-01**
 
 ---
 
-## 📌 Overview
+## Overview
 
 Building on Project 1 (satellite XYZ positions), this project performs a full
 **orbital mechanics analysis** of the GPS constellation. Instead of just computing
@@ -13,7 +13,7 @@ is designed the way it is.
 
 ---
 
-## 📐 Key Orbital Mechanics
+## Key Orbital Mechanics
 
 ### The 6 Keplerian elements:
 
@@ -36,7 +36,7 @@ Ground track    λ = atan2(Y, X)       longitude
 
 ---
 
-## 🖼️ Output Plots
+## Output Plots
 
 ### Plot 1 — Keplerian Elements Dashboard
 Four bar charts (a, e, i, Ω₀) for all 32 GPS satellites.
@@ -61,7 +61,7 @@ Polar plot showing each satellite's RAAN. The 6-plane Walker structure
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 ```
 gnss-satellite-orbit-analysis/
@@ -81,7 +81,7 @@ gnss-satellite-orbit-analysis/
 
 ---
 
-## ⚙️ How to Run
+## How to Run
 
 ### 1. Install dependencies
 ```bash
@@ -101,7 +101,7 @@ jupyter notebook src/project2_orbit_analysis.ipynb
 
 ---
 
-## 🛠️ Dependencies
+## Dependencies
 
 | Package | Purpose |
 |---------|---------|
@@ -112,7 +112,7 @@ jupyter notebook src/project2_orbit_analysis.ipynb
 
 ---
 
-## 👤 Author
+## Author
 
 **Hakim El Azzouzi**  
 MSc Global Navigation Satellite Systems  
@@ -123,13 +123,13 @@ Mohammed First University, Oujda, Morocco
 
 ---
 
-## 📜 License
+## License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🔗 GNSS Navigation RINEX Series
+## GNSS Navigation RINEX Series
 
 | # | Project |
 |---|---------|
